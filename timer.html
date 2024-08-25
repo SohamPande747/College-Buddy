@@ -1,75 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown Timer to Specific Time</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #000000;
-            margin: 0;
-        }
-        #timer {
-            font-size: 360px;
-            color: #8d8d8d;
-            margin-bottom: 20px;
-        }
-        input, button {
-            font-size: 24px;
-            padding: 10px;
-            margin: 5px;
-            background-color: #8d8d8d;
-        }
-    </style>
-</head>
-<body>
-
+    <link rel="stylesheet" href="timer.css" />
+  </head>
+  <body>
     <div id="timer">00:00:00</div>
 
     <div>
-        <input type="datetime-local" id="endTime">
-        <button onclick="startCountdown()">Start Timer</button>
+      <input type="datetime-local" id="endTime" />
+      <button onclick="startCountdown()">Start Timer</button>
     </div>
 
-    <script>
-        let countdownInterval;
-
-        function startCountdown() {
-            clearInterval(countdownInterval); // Clear any existing intervals
-            
-            let endTime = new Date(document.getElementById("endTime").value);
-            let timerElement = document.getElementById("timer");
-
-            countdownInterval = setInterval(function() {
-                let now = new Date();
-                let timeLeft = endTime - now;
-
-                if (timeLeft <= 0) {
-                    clearInterval(countdownInterval);
-                    timerElement.textContent = "Time's up!";
-                    return;
-                }
-
-                let hrs = Math.floor(timeLeft / (1000 * 60 * 60));
-                let mins = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                let secs = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                // Format the time with leading zeros
-                hrs = hrs < 10 ? '0' + hrs : hrs;
-                mins = mins < 10 ? '0' + mins : mins;
-                secs = secs < 10 ? '0' + secs : secs;
-
-                // Update the timer display
-                timerElement.textContent = `${hrs}:${mins}:${secs}`;
-            }, 1000);
-        }
-    </script>
-
-</body>
+    <script src="timer.js"></script>
+  </body>
 </html>
