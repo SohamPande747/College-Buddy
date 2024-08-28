@@ -1,21 +1,29 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000000;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+  margin: 0;
 }
 #timer {
-    font-size: 360px;
-    color: #8d8d8d;
-    margin-bottom: 20px;
+  font-size: 360px;
+  color: #20c20e;
+  margin-bottom: 20px;
 }
-input, button {
-    font-size: 24px;
-    padding: 10px;
-    margin: 5px;
-    background-color: #8d8d8d;
+input,
+button {
+  font-size: 24px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #ffffff;
+}
+#timerName {
+  text-align: center;
+}
+.box {
+  max-width: fit-content;
+  margin-inline: auto;
 }

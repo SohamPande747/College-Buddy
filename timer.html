@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Countdown Timer to Specific Time</title>
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="timer.css" />
   </head>
   <body>
+    <div id="fancy">
+      <input type="text" id="timerName" placeholder="Countdown" />
+    </div>
     <div id="timer">00:00:00</div>
-
     <div>
       <input type="datetime-local" id="endTime" />
       <button onclick="startCountdown()">Start Timer</button>
