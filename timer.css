@@ -8,10 +8,18 @@ body {
   background-color: #000000;
   margin: 0;
 }
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts-DSEG_v046/DSEG7-Modern/DSEG7Modern-Bold.woff2') format('woff2'),
+       url('fonts-DSEG_v046/DSEG7-Modern/DSEG7Modern-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 #timer {
-  font-size: 360px;
+  font-size: 240px;
   color: #20c20e;
   margin-bottom: 20px;
+  font-family: 'MyCustomFont', sans-serif;
 }
 input,
 button {
